@@ -20,7 +20,7 @@ module tb_fft_8point_top;
 
     always #5 clk = ~clk;
 
-    // ---- Q1.15 helpers ----
+    // Q1.15 
     function signed [15:0] to_q15;
         input real val;
         begin
@@ -49,7 +49,7 @@ module tb_fft_8point_top;
         end
     endtask
 
-    // ---- golden model: same stage structure as the RTL, floating point ----
+    // golden model: basically the same stage structure as RTL, floating point
     task golden_fft;
         input  real x0,x1,x2,x3,x4,x5,x6,x7;
         output real Or0,Oi0,Or1,Oi1,Or2,Oi2,Or3,Oi3,Or4,Oi4,Or5,Oi5,Or6,Oi6,Or7,Oi7; 
@@ -148,7 +148,7 @@ module tb_fft_8point_top;
         in_valid = 1'b0;
 
         wait (out_valid == 1'b1);
-        @(posedge clk); // let out_flat fully settle this cycle before reading
+        @(posedge clk);
         $display("---- vector: %.3f %.3f %.3f %.3f %.3f %.3f %.3f %.3f ----",
                    x0,x1,x2,x3,x4,x5,x6,x7);
         check_output(x0,x1,x2,x3,x4,x5,x6,x7);
