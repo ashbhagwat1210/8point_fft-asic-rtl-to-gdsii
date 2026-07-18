@@ -20,11 +20,11 @@ fft8-asic-rtl-to-gdsii/
 │   │
 │   ├── reports/
 │   │   ├──2_floorplan_final.rpt
-│   │   ├──  3_detailed_place.rpt
+│   │   ├──3_detailed_place.rpt
 │   │   ├──4_cts_final.rpt
 │   │   ├──6_drc_count.rpt
 │   │   ├──6_finish.rpt
-│   │   ├──synth_stat.txt
+│   │   └──synth_stat.txt
 │   │
 │   ├── results/
 │   │   ├── 6_final.gds
