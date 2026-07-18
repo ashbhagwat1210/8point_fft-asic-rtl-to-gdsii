@@ -3,7 +3,9 @@ Complete RTL-to-GDSII implementation of an 8-point pipelined Radix-2 DIT FFT usi
 
 <img width="1057" height="890" alt="image" src="https://github.com/user-attachments/assets/ff793fac-dd4d-4420-83e1-e999fccc6666" />
 
-# PROJECT STRUCTURE
+## Project Structure
+
+```text
 fft8-asic-rtl-to-gdsii/
 │
 ├── rtl/
@@ -36,23 +38,19 @@ fft8-asic-rtl-to-gdsii/
 │   │
 │   └── screenshots/
 │       ├── final_layout.webp
-│       ├── final_routing.webp
 │       ├── final_placement.webp
+│       ├── cts_clk_layout.webp
+│       ├── final_routing.webp
 │       ├── final_congestion.webp
-│       ├── cts_clk.webp
+│       ├── final_clocks.webp
 │       └── final_worst_path.webp
-│
-├── docs/
-│   ├── architecture.png
-│   └── flow_diagram.png
 │
 ├── README.md
 ├── LICENSE
 └── .gitignore
-
-
-# DESIGN SPECIFICATIONS
-
+```
+# Design Specifications
+```
 | Parameter | Value |
 | Architecture | 8-Point Pipelined Radix-2 DIT FFT |
 | RTL Language | Verilog |
@@ -60,9 +58,9 @@ fft8-asic-rtl-to-gdsii/
 | Datapath Width | 16-bit Signed |
 | Technology | SKY130 HD |
 | Clock Target | 100 MHz |
-
+```
 # Implementation Results
-
+```
 | Standard Cells | 5,740 |
 | Cell Area | 57,463.86 μm² |
 | Final Design Area | 63,490 μm² |
@@ -73,17 +71,37 @@ fft8-asic-rtl-to-gdsii/
 | Estimated Maximum Frequency | 106.63 MHz |
 | Routing DRC Violations | 0 |
 
-
+```
 # Static Timing Analysis
-The design successfully met timing under the analyzed Typical-Typical (TT) process corner. Future Work - SS and FF timing analysis
+```
+The design successfully met timing under the analyzed Typical-Typical (TT) process corner.
 
 | Clock Constraint | 10 ns |
 | Worst Setup Slack | +0.62 ns |
 | Worst Hold Slack | +0.34 ns |
 | Setup Violations | 0 |
 | Hold Violations | 0 |
-The achieved minimum clock period corresponds to an estimated operating frequency of approximately 106.63 MHz, exceeding the original 100 MHz design target.
 
+```
+# Tools Used
+```
+| RTL Design | Verilog |
+| Functional Simulation | Xilinx Vivado |
+| Logic Synthesis | Yosys |
+| Physical Design | OpenROAD |
+| Timing Analysis | OpenSTA |
+| PDK | SkyWater SKY130 HD |
+| KLayout |
+All using WSL + Docker
+```
+## Future Work
+```
+- Gate-Level Simulation (GLS)
+- SDF-annotated timing simulation
+- Multi-corner timing analysis (FF/SS)
+- Complete LVS sign-off (simulated, with clean DRC/LVS but no report generated due to version constraints) 
+- Learning Formal Verification ( integration of SymbiYosys into this design ) 
+```
 # Physical Design
 
 ## Placement
@@ -105,22 +123,7 @@ The achieved minimum clock period corresponds to an estimated operating frequenc
 <img width="1100" height="1100" alt="final_worst_path" src="https://github.com/user-attachments/assets/a390dc7a-67d3-4b2c-8665-eb43b8238661" />
 
 
-# Tools Used
 
-| RTL Design | Verilog |
-| Functional Simulation | Xilinx Vivado |
-| Logic Synthesis | Yosys |
-| Physical Design | OpenROAD |
-| Timing Analysis | OpenSTA |
-| PDK | SkyWater SKY130 HD |
-All using WSL + Docker
-
-## Future Work
-- Gate-Level Simulation (GLS)
-- SDF-annotated timing simulation
-- Multi-corner timing analysis (FF/SS)
-- Complete LVS sign-off (simulated, with clean DRC/LVS but no report generated due to version constraints) 
-- Learning Formal Verification ( integration of SymbiYosys into this design ) 
 
 | Layout Viewer | KLayout |
 
