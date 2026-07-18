@@ -1,4 +1,4 @@
-
+//formatted neatly using AI
 // complex number multiplication
 module complex_mult (
     input  signed [15:0] a_re, a_im,
