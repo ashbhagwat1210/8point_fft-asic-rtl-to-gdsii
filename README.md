@@ -105,7 +105,7 @@ All using WSL + Docker
 ## Final Layout
 <img width="1100" height="1100" alt="final_all" src="https://github.com/user-attachments/assets/7a4ca2f4-409c-4c62-83a9-4b055feb3fcf" />
 
-## Critcial Path
+## Critical Path
 <img width="1100" height="1100" alt="final_worst_path" src="https://github.com/user-attachments/assets/a390dc7a-67d3-4b2c-8665-eb43b8238661" />
 
 
