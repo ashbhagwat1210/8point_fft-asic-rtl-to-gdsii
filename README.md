@@ -19,15 +19,12 @@ fft8-asic-rtl-to-gdsii/
 │   ├── constraint.sdc
 │   │
 │   ├── reports/
-│   │   ├── synth_stat.txt
-│   │   ├── 2_floorplan_final.rpt
-│   │   ├── 3_global_place.rpt
-│   │   ├── 3_detailed_place.rpt
-│   │   ├── 3_resizer.rpt
-│   │   ├── 4_cts_final.rpt
-│   │   ├── 5_global_route.rpt
-│   │   ├── 6_finish.rpt
-│   │   └── 6_drc_count.rpt
+│   │   ├──2_floorplan_final.rpt
+│   │   ├──  3_detailed_place.rpt
+│   │   ├──4_cts_final.rpt
+│   │   ├──6_drc_count.rpt
+│   │   ├──6_finish.rpt
+│   │   ├──synth_stat.txt
 │   │
 │   ├── results/
 │   │   ├── 6_final.gds
@@ -35,19 +32,8 @@ fft8-asic-rtl-to-gdsii/
 │   │   ├── 6_final.v
 │   │   ├── 6_final.spef
 │   │   └── 6_final.cdl
-│   │
-│   └── screenshots/
-│       ├── final_layout.webp
-│       ├── final_placement.webp
-│       ├── cts_clk_layout.webp
-│       ├── final_routing.webp
-│       ├── final_congestion.webp
-│       ├── final_clocks.webp
-│       └── final_worst_path.webp
 │
-├── README.md
-├── LICENSE
-└── .gitignore
+└──  README.md
 ```
 # Design Specifications
 ```
